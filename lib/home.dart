@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'Card.dart';
+import 'cfFavorite.dart';
 import 'coffeeoftheday.dart';
+import 'ordered.dart';
 
 class CoffeeHome extends StatefulWidget {
   static List<cfCard> cfList= [];
@@ -231,7 +233,7 @@ class _CoffeeHomeState extends State<CoffeeHome> {
             BottomNavigationBarItem(
                 icon: IconButton(
                   onPressed: () {
-
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>yourOrders()));
                   }, icon: Icon(Icons.coffee),
 
                 ),
@@ -241,7 +243,7 @@ class _CoffeeHomeState extends State<CoffeeHome> {
             BottomNavigationBarItem(
                 icon: IconButton(
                   onPressed: () {
-
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>favorite()));
                   }, icon: Icon(Icons.favorite),
 
                 ),
