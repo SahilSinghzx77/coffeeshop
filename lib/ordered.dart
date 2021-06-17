@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Card.dart';
-import 'home.dart';
+import 'home/Card.dart';
+import 'home/home.dart';
 
 class yourOrders extends StatelessWidget {
   const yourOrders({Key? key}) : super(key: key);

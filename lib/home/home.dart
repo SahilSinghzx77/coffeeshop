@@ -1,9 +1,10 @@
+import 'package:coffeeshop/services/auth.dart';
 import 'package:flutter/material.dart';
 
 import 'Card.dart';
-import 'cfFavorite.dart';
-import 'coffeeoftheday.dart';
-import 'ordered.dart';
+import '../cfFavorite.dart';
+import '../coffeeoftheday.dart';
+import '../ordered.dart';
 
 class CoffeeHome extends StatefulWidget {
   static List<cfCard> cfList= [];
@@ -13,10 +14,28 @@ class CoffeeHome extends StatefulWidget {
 }
 
 class _CoffeeHomeState extends State<CoffeeHome> {
+
+  AuthService _auth=AuthService();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0.00,
+          actions: [
+            IconButton(
+              icon: Icon(
+                Icons.logout,
+                color: Colors.orange[400],
+              ),
+              onPressed: () async {
+                return await _auth.signOut();
+              },
+            )
+          ],
+        ),
         backgroundColor: Colors.brown[50],
         body: ListView(
           children: [

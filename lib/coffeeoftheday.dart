@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Card.dart';
-import 'home.dart';
+import 'home/Card.dart';
+import 'home/home.dart';
 
 class cfoftheday extends StatelessWidget {
   const cfoftheday({Key? key}) : super(key: key);
