@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Card.dart';
+import 'coffeeoftheday.dart';
 
 class CoffeeHome extends StatefulWidget {
   static List<cfCard> cfList= [];
@@ -125,6 +126,88 @@ class _CoffeeHomeState extends State<CoffeeHome> {
                       )
                     ],
                   ),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.fromLTRB(10,0,0,0),
+                  child: Text(
+                    'Today\'s Special',
+                    style: TextStyle(
+                        color: Colors.brown[900],
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 15),
+            cfoftheday(),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.fromLTRB(10,0,0,0),
+                  child: Text(
+                    'Regulars',
+                    style: TextStyle(
+                        color: Colors.brown[900],
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 15),
+            Center(
+              child: Stack(
+                children: [
+                  cfCard('caffe mocha','A caffè latte with chocolate and whipped cream.',4.99),
+                  Container(
+                    child: CircleAvatar(
+                      backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7BPKzUAxMUoZoSZm7Wdw-vlYvDSUSnJyEUKOz8qO965M4TBtRGhjlAStVjVsM5j_xCDU&usqp=CAU'),
+                    ),
+                    width: 100,
+                    height: 100,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
+            Center(
+              child: Stack(
+                children: [
+                  cfCard('Brew coffee','cold beverage prepared by brewing. ',4.99),
+                  Container(
+                    child: CircleAvatar(
+                      backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7BPKzUAxMUoZoSZm7Wdw-vlYvDSUSnJyEUKOz8qO965M4TBtRGhjlAStVjVsM5j_xCDU&usqp=CAU'),
+                    ),
+                    width: 100,
+                    height: 100,
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
+            Center(
+              child: Stack(
+                children: [
+                  cfCard('caffe au lait',' Made by mixing dark roasted filter coffee and warm milk.',4.99),
+                  Container(
+                    child: CircleAvatar(
+                      backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7BPKzUAxMUoZoSZm7Wdw-vlYvDSUSnJyEUKOz8qO965M4TBtRGhjlAStVjVsM5j_xCDU&usqp=CAU'),
+                    ),
+                    width: 100,
+                    height: 100,
+                  )
                 ],
               ),
             ),
