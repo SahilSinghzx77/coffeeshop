@@ -14,5 +14,3 @@
 -Flutter(Android Studio)
 -Firebase
 -Dart
-
-
