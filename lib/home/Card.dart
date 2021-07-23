@@ -1,3 +1,4 @@
+import 'package:coffeeshop/screens/Order/orderNow.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
 
@@ -97,7 +98,7 @@ class cfCard extends StatelessWidget {
                 FlatButton(
                   onPressed: () {
                     this.ordered = true;
-                    // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>yourOrders()));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>orderNow()));
                   },
                   child: Text(
                     'Order Now',

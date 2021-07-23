@@ -28,7 +28,7 @@ class _CoffeeHomeState extends State<CoffeeHome> {
             IconButton(
               icon: Icon(
                 Icons.logout,
-                color: Colors.orange[400],
+                color: Colors.brown[900],
               ),
               onPressed: () async {
                 return await _auth.signOut();
@@ -39,7 +39,7 @@ class _CoffeeHomeState extends State<CoffeeHome> {
         backgroundColor: Colors.brown[50],
         body: ListView(
           children: [
-            SizedBox(height:50),
+            SizedBox(height:30),
             Row(
               children: [
                 Container(
@@ -48,7 +48,7 @@ class _CoffeeHomeState extends State<CoffeeHome> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        'Welcome, Nadia',
+                        'Welcome, Joey!',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontStyle: FontStyle.normal,
